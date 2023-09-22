@@ -3,6 +3,20 @@ study-join-go
 
 The best algorithm to join strings with a separator
 
+【結論】 strings.Join 的アルゴリズム、
+
+```
+    sep := ""
+    for i := 0; i < n; i++ {
+        buffer.WriteString(sep)
+        buffer.WriteString("foo")
+        sep = ","
+    }
+```
+
+と書くとコンパクトでいいかなと思ったが、ベンチとったら予想以上に遅かった。
+
+
 ## main.go
 
 ```main.go
