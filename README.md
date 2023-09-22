@@ -51,7 +51,7 @@ func join3(n int) string {
 }
 ```
 
-## main\_test.g0
+## main\_test.go
 
 ```main_test.go
 package studyjoin
@@ -74,6 +74,8 @@ func Benchmark3(B *testing.B) {
 ```
 
 ## Benchmark
+
+`go test -bench . -benchmem`
 
 ```go test -bench . -benchmem |
 goos: windows
