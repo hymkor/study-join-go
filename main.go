@@ -6,6 +6,7 @@ import (
 
 func join1(n int) string {
 	var buffer strings.Builder
+	buffer.Grow(n * 4)
 	sep := ""
 
 	for i := 0; i < n; i++ {
@@ -18,6 +19,7 @@ func join1(n int) string {
 
 func join2(n int) string {
 	var buffer strings.Builder
+	buffer.Grow(n * 4)
 
 	for i := 0; i < n; i++ {
 		if i > 0 {
@@ -30,6 +32,7 @@ func join2(n int) string {
 
 func join3(n int) string {
 	var buffer strings.Builder
+	buffer.Grow(n * 4)
 
 	buffer.WriteString("foo")
 	for i := 1; i < n; i++ {
