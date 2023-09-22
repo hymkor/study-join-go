@@ -14,6 +14,7 @@ import (
 
 func join1(n int) string {
     var buffer strings.Builder
+    buffer.Grow(n * 4)
     sep := ""
 
     for i := 0; i < n; i++ {
@@ -26,6 +27,7 @@ func join1(n int) string {
 
 func join2(n int) string {
     var buffer strings.Builder
+    buffer.Grow(n * 4)
 
     for i := 0; i < n; i++ {
         if i > 0 {
@@ -38,6 +40,7 @@ func join2(n int) string {
 
 func join3(n int) string {
     var buffer strings.Builder
+    buffer.Grow(n * 4)
 
     buffer.WriteString("foo")
     for i := 1; i < n; i++ {
@@ -77,9 +80,9 @@ goos: windows
 goarch: amd64
 pkg: github.com/hymkor/study-join
 cpu: Intel(R) Core(TM) i5-6500T CPU @ 2.50GHz
-Benchmark1-4   	131755576	         9.525 ns/op	      22 B/op	       0 allocs/op
-Benchmark2-4   	200601704	         8.977 ns/op	      22 B/op	       0 allocs/op
-Benchmark3-4   	198423524	         5.945 ns/op	      23 B/op	       0 allocs/op
+Benchmark1-4   	150945446	         6.656 ns/op	       4 B/op	       0 allocs/op
+Benchmark2-4   	319171430	         5.074 ns/op	       4 B/op	       0 allocs/op
+Benchmark3-4   	308101213	         3.999 ns/op	       4 B/op	       0 allocs/op
 PASS
-ok  	github.com/hymkor/study-join	8.776s
+ok  	github.com/hymkor/study-join	5.708s
 ```
