@@ -41,3 +41,18 @@ func join3(n int) string {
 	}
 	return buffer.String()
 }
+
+func join4(n int) string {
+	var buffer strings.Builder
+	buffer.Grow(n * 4)
+
+	for i := 0; ; {
+		buffer.WriteString("foo")
+		i++
+		if i >= n {
+			break
+		}
+		buffer.WriteString(",")
+	}
+	return buffer.String()
+}
