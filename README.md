@@ -3,7 +3,7 @@ study-join-go
 
 The best algorithm to join strings with a separator
 
-【結論】 strings.Join 的アルゴリズム、
+**【結論】 strings.Join 的アルゴリズム**
 
 ```
     sep := ""
